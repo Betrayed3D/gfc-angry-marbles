@@ -1,10 +1,15 @@
 #pragma once
+#include "SpriteBox2D.h"
 
 class CMyGame : public CGame
 {
-	CSpriteRect m_ground;
+	b2World world;
+
+	CSpriteBox2DRect m_ground;
 	CSpriteList m_house;
-	CSpriteOval m_marble;
+	CSpriteBox2DCircle m_marble;
+
+	bool m_bAiming;
 
 	static const int X_SLING = 200;
 	static const int Y_SLING = 200;
